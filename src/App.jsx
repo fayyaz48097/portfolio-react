@@ -778,7 +778,7 @@ const App = () => {
               Minhaj University Lahore | Lahore, Pakistan
             </p>
             <p className="mt-1 mb-3 text-sm text-gray-500">2021 - 2025</p>
-            <p className="text-gray-700">GPA: 3.6</p>
+            <p className="text-gray-700">GPA: 3.65</p>
           </div>
         </section>
 
