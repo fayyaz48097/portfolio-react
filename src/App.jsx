@@ -668,7 +668,6 @@ const App = () => {
   // State for projects data (moved here as it's global to the CV content)
   const [projects, setProjects] = useState(
     [
-      // UPDATED FYP PROJECT
       {
         title: "Skill Sharing App (FYP)",
         year: 2025,
@@ -683,7 +682,7 @@ const App = () => {
           "Vercel",
         ],
         liveUrl: "https://skill-sharing-app.vercel.app/",
-        gitUrl: null, // Add your git URL when it's ready
+        gitUrl: null,
         type: "Deployed",
       },
       {
@@ -694,6 +693,17 @@ const App = () => {
         technologies: ["React", "Axios", "JavaScript", "Vercel", "HTML", "CSS"],
         liveUrl: "https://weather-app-self-three-67.vercel.app/",
         gitUrl: "https://github.com/fayyaz48097/WeatherApp.git",
+        type: "Deployed",
+      },
+      // UPDATED FEEDBEAR PROJECT
+      {
+        title: "Feedbear App Clone",
+        year: 2023,
+        description:
+          "A pixel-perfect clone of the Feedbear application's landing page, built to practice advanced layout techniques with Tailwind CSS.",
+        technologies: ["HTML", "CSS", "Tailwind CSS"],
+        liveUrl: "https://feedbear-by-fayyaz.netlify.app/",
+        gitUrl: null,
         type: "Deployed",
       },
       {
@@ -790,14 +800,6 @@ const App = () => {
         description:
           "Developed a single-page application clone with advanced animations and transitions using SASS.",
         technologies: ["SASS", "HTML", "CSS"],
-        type: "Work",
-      },
-      {
-        title: "Feedbear App using Tailwind",
-        year: 2023,
-        description:
-          "Developed a clone of the Feedbear app pages using Tailwind CSS.",
-        technologies: ["Tailwind CSS", "HTML", "JavaScript"],
         type: "Work",
       },
       {
@@ -911,7 +913,6 @@ const App = () => {
             >
               Experience
             </a>
-            {/* ADDED NEW NAV LINK */}
             <a
               href="#deployed-projects"
               className="text-gray-700 border-b-2 border-transparent nav-link hover:text-blue-700 hover:border-blue-700"
@@ -947,7 +948,6 @@ const App = () => {
             >
               Certifications
             </a>
-            {/* Download Resume button moved here */}
             <button
               onClick={goToDownloadPage}
               className="px-4 py-2 text-white transition-colors bg-orange-500 rounded-lg hover:bg-orange-600"
@@ -955,7 +955,6 @@ const App = () => {
               Download Resume
             </button>
           </div>
-          {/* Contact Me button is now next to Download Resume */}
           <a
             href="mailto:iam.fayyazali@gmail.com"
             className="hidden px-4 py-2 text-white transition-colors bg-blue-600 rounded-lg md:block hover:bg-blue-700"
