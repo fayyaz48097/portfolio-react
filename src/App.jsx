@@ -387,7 +387,9 @@ const HomeView = ({
                 Web Developer Intern
               </h4>
               <p className="text-gray-700">Zaions | Lahore, Pakistan</p>
-              <p className="mt-1 mb-3 text-sm text-gray-500">2024 (2 months)</p>
+              <p className="mt-1 mb-3 text-sm text-gray-500">
+                Feb 2023 - Feb 2024
+              </p>
               <ul className="space-y-1 text-gray-700 list-disc list-inside">
                 <li>
                   Developed user interfaces with modern JavaScript frameworks,
@@ -413,7 +415,7 @@ const HomeView = ({
                 IGO Pvt | Lahore, Pakistan
               </p>
               <p className="mt-1 mb-3 text-sm text-right text-gray-500">
-                2023 (2 months)
+                Oct 2024 - Nov 2024
               </p>
               <ul className="space-y-1 text-left text-gray-700 list-disc list-outside">
                 <li>
@@ -431,7 +433,9 @@ const HomeView = ({
                 Web Developer Intern
               </h4>
               <p className="text-gray-700">Invobyte | Lahore, Pakistan</p>
-              <p className="mt-1 mb-3 text-sm text-gray-500">2023 (2 months)</p>
+              <p className="mt-1 mb-3 text-sm text-gray-500">
+                March 2025 - June 2025
+              </p>
               <ul className="space-y-1 text-gray-700 list-disc list-inside">
                 <li>
                   Developed user-friendly interfaces using React.js, HTML5, and
