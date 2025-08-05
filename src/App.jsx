@@ -1,6 +1,82 @@
 import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
+// DeployedProjects Component
+const DeployedProjects = ({ projects }) => {
+  // Filter for only deployed projects
+  const deployed = projects.filter((p) => p.type === "Deployed");
+
+  if (deployed.length === 0) {
+    return null; // Don't render the section if there are no deployed projects
+  }
+
+  return (
+    <section id="deployed-projects" className="mb-24">
+      <h3 className="mb-4 text-4xl font-bold text-center text-gray-900">
+        Live & Deployed Projects
+      </h3>
+      <p className="max-w-3xl mx-auto mb-12 text-center text-gray-700">
+        These projects are fully deployed and accessible online. Check them out
+        live or review the source code on GitHub.
+      </p>
+      <div className="grid max-w-5xl grid-cols-1 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
+        {deployed.map((project, index) => (
+          <div
+            key={index}
+            className="flex flex-col p-6 overflow-hidden transition-transform transform bg-white border border-green-200 rounded-lg shadow-lg project-card hover:scale-105"
+          >
+            <div className="flex-grow">
+              <div className="flex items-start justify-between mb-2">
+                <h4 className="text-xl font-bold text-gray-900">
+                  {project.title}
+                </h4>
+                <span className="text-sm font-medium text-gray-500">
+                  {project.year}
+                </span>
+              </div>
+              <p className="mb-4 text-gray-700">{project.description}</p>
+            </div>
+            <div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center space-x-4">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-blue-600 hover:text-blue-800"
+                  >
+                    View Live ↗
+                  </a>
+                )}
+                {project.gitUrl && (
+                  <a
+                    href={project.gitUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-gray-600 hover:text-gray-800"
+                  >
+                    View Code ↗
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 // HomeView Component (Encapsulates the main CV content)
 const HomeView = ({
   projects,
@@ -371,6 +447,9 @@ const HomeView = ({
         </div>
       </section>
 
+      {/* NEW DEPLOYED PROJECTS SECTION */}
+      <DeployedProjects projects={projects} />
+
       {/* Projects Section */}
       <section id="projects" className="mb-24">
         <h3 className="mb-4 text-4xl font-bold text-center text-gray-900">
@@ -478,7 +557,7 @@ const HomeView = ({
             Minhaj University Lahore | Lahore, Pakistan
           </p>
           <p className="mt-1 mb-3 text-sm text-gray-500">2021 - 2025</p>
-          <p className="text-gray-700">GPA: 3.6</p>
+          <p className="text-gray-700">GPA: 3.65</p>
         </div>
       </section>
 
@@ -589,6 +668,34 @@ const App = () => {
   // State for projects data (moved here as it's global to the CV content)
   const [projects, setProjects] = useState(
     [
+      // UPDATED FYP PROJECT
+      {
+        title: "Skill Sharing App (FYP)",
+        year: 2025,
+        description:
+          "My Final Year Project: a full-stack web app connecting users to share and learn skills. Built with a React front-end and a comprehensive Firebase backend for data, auth, and storage.",
+        technologies: [
+          "React",
+          "Firebase Auth",
+          "Firestore",
+          "Firebase Storage",
+          "Realtime Database",
+          "Vercel",
+        ],
+        liveUrl: "https://skill-sharing-app.vercel.app/",
+        gitUrl: null, // Add your git URL when it's ready
+        type: "Deployed",
+      },
+      {
+        title: "Weather App Web Application",
+        year: 2024,
+        description:
+          "A React-based web application to check real-time weather forecasts using the OpenWeatherMap API. Features a clean interface, secure API key handling with .env, and deployed on Vercel.",
+        technologies: ["React", "Axios", "JavaScript", "Vercel", "HTML", "CSS"],
+        liveUrl: "https://weather-app-self-three-67.vercel.app/",
+        gitUrl: "https://github.com/fayyaz48097/WeatherApp.git",
+        type: "Deployed",
+      },
       {
         title: "CV-Builder - Web base",
         year: 2024,
@@ -614,7 +721,7 @@ const App = () => {
       },
       {
         title: "Web Developer Intern - Zaions",
-        year: 2024, // Assuming 2024 based on the document's order for this entry
+        year: 2024,
         description:
           "Developed user interfaces with modern JavaScript frameworks, HTML5, and CSS3; wrote custom HTML and JavaScript for existing websites; developed interactive prototypes.",
         technologies: ["JavaScript", "HTML5", "CSS3", "WordPress"],
@@ -622,7 +729,7 @@ const App = () => {
       },
       {
         title: "Omni food, Hotel, Profile Template",
-        year: 2024, // Assuming 2024 based on the document's order for this entry
+        year: 2024,
         description:
           "Developed landing pages using HTML & CSS, marking the start of a web developer journey.",
         technologies: ["HTML", "CSS"],
@@ -804,6 +911,14 @@ const App = () => {
             >
               Experience
             </a>
+            {/* ADDED NEW NAV LINK */}
+            <a
+              href="#deployed-projects"
+              className="text-gray-700 border-b-2 border-transparent nav-link hover:text-blue-700 hover:border-blue-700"
+              onClick={goToHomePage}
+            >
+              Live Projects
+            </a>
             <a
               href="#projects"
               className="text-gray-700 border-b-2 border-transparent nav-link hover:text-blue-700 hover:border-blue-700"
@@ -894,6 +1009,16 @@ const App = () => {
             }}
           >
             Experience
+          </a>
+          <a
+            href="#deployed-projects"
+            className="block py-2 text-gray-700 hover:text-blue-700"
+            onClick={() => {
+              goToHomePage();
+              setIsMobileMenuOpen(false);
+            }}
+          >
+            Live Projects
           </a>
           <a
             href="#projects"
