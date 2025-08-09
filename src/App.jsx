@@ -673,6 +673,20 @@ const App = () => {
   const [projects, setProjects] = useState(
     [
       {
+        title: "Chat System",
+        year: 2024,
+        description: "This project is a real-time chat application.",
+        technologies: [
+          "React",
+          "Firebase Realtime Database",
+          "Axios",
+          "Tailwind",
+        ],
+        liveUrl: "https://chat-system-nu.vercel.app/",
+        gitUrl: "https://github.com/fayyaz48097/Chat-System",
+        type: "Deployed",
+      },
+      {
         title: "Skill Sharing App (FYP)",
         year: 2025,
         description:
@@ -707,6 +721,22 @@ const App = () => {
           "A pixel-perfect clone of the Feedbear application's landing page, built to practice advanced layout techniques with Tailwind CSS.",
         technologies: ["HTML", "CSS", "Tailwind CSS"],
         liveUrl: "https://feedbear-by-fayyaz.netlify.app/",
+        gitUrl: null,
+        type: "Deployed",
+      },
+      {
+        title: "Omnifood Restaurant Landing Page",
+        year: 2024,
+        description:
+          "A comprehensive, fully responsive restaurant landing page showcasing modern web design principles. Features include an engaging hero section, interactive meal gallery, customer testimonials, pricing plans, and contact forms.",
+        technologies: [
+          "HTML",
+          "CSS",
+          "Responsive Design",
+          "CSS Grid",
+          "Flexbox",
+        ],
+        liveUrl: "https://omnifood-by-fayyaz.netlify.app/",
         gitUrl: null,
         type: "Deployed",
       },
