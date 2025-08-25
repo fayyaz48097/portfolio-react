@@ -384,13 +384,83 @@ const HomeView = ({
           <div className="relative mb-12 experience-item ml-[calc(50%+2rem)]">
             <div className="p-6 bg-white rounded-lg shadow-md">
               <h4 className="text-xl font-bold text-gray-900">
-                Web Developer Intern
+                Full Stack Developer
               </h4>
-              <p className="text-gray-700">Zaions | Lahore, Pakistan</p>
+              <p className="text-gray-700">Algo Softtech | Lahore, Pakistan</p>
               <p className="mt-1 mb-3 text-sm text-gray-500">
-                Feb 2023 - Feb 2024
+                July 2025 - Present
               </p>
               <ul className="space-y-1 text-gray-700 list-disc list-inside">
+                <li>
+                  **Frontend:** Built the frontend for the MaxAutoCare
+                  e-commerce web application using React and integrated RESTful
+                  APIs with Axios.
+                </li>
+                <li>
+                  **Backend:** Developed the backend ERP system using Laravel,
+                  leveraging its robust community support.
+                </li>
+                <li>
+                  **Database:** Utilized MySQL to manage the database, including
+                  inventory and invoice generation.
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* Experience Item 2 (Right Aligned) */}
+          <div className="relative mb-12 experience-item mr-[calc(50%+2rem)]">
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h4 className="text-xl font-bold text-right text-gray-900">
+                Web Developer Intern
+              </h4>
+              <p className="text-right text-gray-700">
+                Invobyte | Lahore, Pakistan
+              </p>
+              <p className="mt-1 mb-3 text-sm text-right text-gray-500">
+                March 2025 - June 2025
+              </p>
+              <ul className="space-y-1 text-left text-gray-700 list-disc list-outside">
+                <li>
+                  Developed user-friendly interfaces using React.js, HTML5, and
+                  CSS3.
+                </li>
+                <li>
+                  Built interactive features using modern JavaScript (ES6+) and
+                  React hooks.
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* Experience Item 3 (Left Aligned) */}
+          <div className="relative mb-12 experience-item ml-[calc(50%+2rem)]">
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h4 className="text-xl font-bold text-gray-900">Web Developer</h4>
+              <p className="text-gray-700">IGO Pvt | Lahore, Pakistan</p>
+              <p className="mt-1 mb-3 text-sm text-gray-500">
+                Oct 2024 - Nov 2024
+              </p>
+              <ul className="space-y-1 text-gray-700 list-disc list-inside">
+                <li>
+                  Developed and maintained user interfaces with WordPress
+                  themes.
+                </li>
+                <li>Customized themes to meet client requirements.</li>
+              </ul>
+            </div>
+          </div>
+          {/* Experience Item 4 (Right Aligned) */}
+          <div className="relative mb-12 experience-item mr-[calc(50%+2rem)]">
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h4 className="text-xl font-bold text-right text-gray-900">
+                Web Developer Intern
+              </h4>
+              <p className="text-right text-gray-700">
+                Zaions | Lahore, Pakistan
+              </p>
+              <p className="mt-1 mb-3 text-sm text-right text-gray-500">
+                Feb 2023 - Feb 2024
+              </p>
+              <ul className="space-y-1 text-left text-gray-700 list-disc list-outside">
                 <li>
                   Developed user interfaces with modern JavaScript frameworks,
                   HTML5, and CSS3.
@@ -401,49 +471,6 @@ const HomeView = ({
                 </li>
                 <li>
                   Created interactive prototypes for client presentations.
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* Experience Item 2 (Right Aligned) */}
-          <div className="relative mb-12 experience-item mr-[calc(50%+2rem)]">
-            <div className="p-6 bg-white rounded-lg shadow-md">
-              <h4 className="text-xl font-bold text-right text-gray-900">
-                Web Developer
-              </h4>
-              <p className="text-right text-gray-700">
-                IGO Pvt | Lahore, Pakistan
-              </p>
-              <p className="mt-1 mb-3 text-sm text-right text-gray-500">
-                Oct 2024 - Nov 2024
-              </p>
-              <ul className="space-y-1 text-left text-gray-700 list-disc list-outside">
-                <li>
-                  Developed and maintained user interfaces with WordPress
-                  themes.
-                </li>
-                <li>Customized themes to meet client requirements.</li>
-              </ul>
-            </div>
-          </div>
-          {/* Experience Item 3 (Left Aligned) */}
-          <div className="relative mb-12 experience-item ml-[calc(50%+2rem)]">
-            <div className="p-6 bg-white rounded-lg shadow-md">
-              <h4 className="text-xl font-bold text-gray-900">
-                Web Developer Intern
-              </h4>
-              <p className="text-gray-700">Invobyte | Lahore, Pakistan</p>
-              <p className="mt-1 mb-3 text-sm text-gray-500">
-                March 2025 - June 2025
-              </p>
-              <ul className="space-y-1 text-gray-700 list-disc list-inside">
-                <li>
-                  Developed user-friendly interfaces using React.js, HTML5, and
-                  CSS3.
-                </li>
-                <li>
-                  Built interactive features using modern JavaScript (ES6+) and
-                  React hooks.
                 </li>
               </ul>
             </div>
@@ -769,6 +796,22 @@ const App = () => {
         description:
           "Developed user interfaces with modern JavaScript frameworks, HTML5, and CSS3; wrote custom HTML and JavaScript for existing websites; developed interactive prototypes.",
         technologies: ["JavaScript", "HTML5", "CSS3", "WordPress"],
+        type: "Experience",
+      },
+      {
+        title: "Full Stack Developer - Algo Softtech",
+        year: 2025,
+        description: `Frontend: Using React build frontend for MaxAutoCare ecommerce web application. Using restful api integration using axios.
+                      Backend: Laravel supported by huge communite, use as backend ERP system. Each entry invenory system invoice generated.
+                      Database: MySQL used as database system.`,
+        technologies: [
+          "React Js",
+          "HTML5",
+          "CSS3",
+          "Tailwind",
+          "Laravel",
+          "RestFul APIs",
+        ],
         type: "Experience",
       },
       {
