@@ -1184,7 +1184,7 @@ const ResumeDownloadPage = ({ onBackToHome, isDark }) => {
         }`}
       >
         <iframe
-          src="/Engg.Fayyaz Ali-Associate-Frontend.pdf"
+          src="/Engg.Fayyaz Ali-Frontend.pdf"
           title="Fayyaz Ali Resume"
           className="w-full h-full border-none rounded-lg"
           style={{ minHeight: "400px" }}
